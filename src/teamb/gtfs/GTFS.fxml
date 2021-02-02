@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Label?>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="teamb.gtfs.GTFSController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu fx:id="fileMenu" mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="importButton" mnemonicParsing="false" onAction="#importItem" text="Import" />
+                  <MenuItem fx:id="exportButton" disable="true" mnemonicParsing="false" onAction="#exportGTFS" text="Export" />
+            </items>
+          </Menu>
+            <Menu fx:id="DisplayMenu" mnemonicParsing="false" text="DisplayItems">
+                <items>
+                    <MenuItem fx:id="displayTripsOnStops" mnemonicParsing="false" onAction="#displayTripsEachStop" text="Display Number of Trips on Each Stop" />
+                </items>
+                <items>
+                    <MenuItem fx:id="displayRoutesOnStops" mnemonicParsing="false" onAction="#displayRoutesForStopID" text="Display All Routes on StopID" />
+                </items>
+                <items>
+                <MenuItem fx:id="displayNextTripByStopID" mnemonicParsing="false" onAction="#displayNextTripStopID" text="Search Stop For Next Trip" />
+            </items>
+                <items>
+                    <MenuItem fx:id="displayStopsByRouteId" mnemonicParsing="false" onAction="#displayStopsForRouteID" text="Display All Stops on RouteID" />
+                </items>
+                <items>
+                    <MenuItem fx:id="displayTripsLeftInDay" mnemonicParsing="false" onAction="#displayTripsLeftInDay" text="Display All Trips left in Day" />
+                </items>
+
+            </Menu>
+        </menus>
+      </MenuBar>
+       <TextArea fx:id="textArea" editable="false" focusTraversable="false" layoutX="203.0" layoutY="32.0" prefHeight="205.0" prefWidth="308.0" wrapText="false" />
+       <Label text="Team B GTFS Application under GNU GPL v3 License" />
+   </children>
+</VBox>
